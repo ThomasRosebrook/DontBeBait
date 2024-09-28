@@ -1,1 +1,3 @@
 ﻿Content/Lusitana/Lusitana-Regular.ttf - Lusitana font created by Ana Paula Megda, released on Google Fonts (https://fonts.google.com/specimen/Lusitana) under the Open Font License
+Content/Wah Game Loop.mp3 - "Wah Game Loop" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/
+Content/Funk Game Loop.mp3 - "Funk Game Loop" Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/

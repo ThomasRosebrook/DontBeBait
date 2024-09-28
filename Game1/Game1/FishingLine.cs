@@ -17,6 +17,8 @@ namespace Game1
         float angle;
         Vector2 topPos;
 
+        bool previousDirectionNegative = false;
+
         public FishingLine(Vector2 hookPosition, Vector2 topPosition)
         {
             Position = hookPosition;
@@ -31,7 +33,18 @@ namespace Game1
         public void Update(GameTime gameTime, Vector2 direction)
         {
             Position += direction;
+            if (direction.X <= 0 && previousDirectionNegative)
+            {
+                Position.X += 44;
+                previousDirectionNegative = false;
+            }
+            else if (direction.X > 0 && !previousDirectionNegative)
+            {
+                Position.X -= 44;
+                previousDirectionNegative = true;
+            }
             
+
             bool flipped = Position.X - topPos.X > 0;
 
             angle = (float)Math.PI / 2 - (float)Math.Atan(Math.Abs((Position.Y - topPos.Y) / (Position.X - topPos.X)));

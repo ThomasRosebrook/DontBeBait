@@ -74,7 +74,8 @@ namespace Game1
                 spaceBarPressed = true;
             }
 
-            if (currentGamePadState.Buttons.Back == ButtonState.Pressed || currentKeyboardState.IsKeyDown(Keys.Escape))
+            Exit = false;
+            if (currentGamePadState.Buttons.Back == ButtonState.Pressed && previousGamePadState.Buttons.Back != ButtonState.Pressed || currentKeyboardState.IsKeyDown(Keys.Escape) && !previousKeyboardState.IsKeyDown(Keys.Escape))
             {
                 Exit = true;
             }

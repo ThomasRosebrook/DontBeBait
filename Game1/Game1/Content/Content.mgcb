@@ -37,6 +37,12 @@
 /processorParam:TextureFormat=Color
 /build:big_fish.png
 
+#begin Crunch.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Crunch.wav
+
 #begin fishing_line.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -49,12 +55,37 @@
 /processorParam:TextureFormat=Color
 /build:fishing_line.png
 
+#begin Funk Game Loop.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Funk Game Loop.mp3
+
 #begin Lusitana.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Lusitana.spritefont
+
+#begin LusitanaMenu.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:LusitanaMenu.spritefont
+
+#begin MainMenu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:MainMenu.png
 
 #begin medium_fish.png
 /importer:TextureImporter
@@ -68,6 +99,24 @@
 /processorParam:TextureFormat=Color
 /build:medium_fish.png
 
+#begin Nom.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Nom.wav
+
+#begin Pop1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Pop1.wav
+
+#begin Pop2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Pop2.wav
+
 #begin small_fish.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -79,6 +128,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:small_fish.png
+
+#begin Wah Game Loop.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Wah Game Loop.mp3
 
 #begin Worm.png
 /importer:TextureImporter

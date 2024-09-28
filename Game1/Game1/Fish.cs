@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -16,16 +17,19 @@ namespace Game1
     {
         public BoundingCircle bounds;
 
-        FishType fishType;
+        public FishType fishType;
         Vector2 position;
         int velocity = 20;
         Vector2 direction;
         Texture2D texture;
         float angle;
 
-        public static Texture2D smallFishTexture;
-        public static Texture2D mediumFishTexture;
-        public static Texture2D largeFishTexture;
+        static Texture2D smallFishTexture;
+        static Texture2D mediumFishTexture;
+        static Texture2D largeFishTexture;
+
+        public static SoundEffect PopSound1;
+        public static SoundEffect PopSound2;
 
         bool flipped;
 
@@ -100,7 +104,13 @@ namespace Game1
             if (dist < 125000 && mouthTimer >= 12)
             {
                 mouthTimer = 0;
-                if (mouthIndex == 0) mouthIndex = 1;
+                if (mouthIndex == 0)
+                {
+                    mouthIndex = 1;
+                    PopSound1.Play();
+                    //if (RandomHelper.Next(0, 1) == 0) PopSound1.Play();
+                    //else PopSound2.Play();
+                }
                 else mouthIndex = 0;
             }
 
@@ -123,6 +133,13 @@ namespace Game1
         {
             SpriteEffects spriteEffects = (flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             spriteBatch.Draw(texture, position, new Rectangle(finIndex * 256, mouthIndex * 256, 256, 256), Color.White, angle, new Vector2(128, 128), 1f, spriteEffects, 0);
+        }
+
+        public static void LoadFishTextures(ContentManager content)
+        {
+            if (smallFishTexture == null) smallFishTexture = content.Load<Texture2D>("small_fish");
+            if (mediumFishTexture == null) mediumFishTexture = content.Load<Texture2D>("medium_fish");
+            if (largeFishTexture == null) largeFishTexture = content.Load<Texture2D>("big_fish");
         }
     }
 }
