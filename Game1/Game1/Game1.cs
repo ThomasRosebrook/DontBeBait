@@ -1,11 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System.Collections.Generic;
-using System;
-using Microsoft.VisualBasic;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 using Game1.StateManagement;
 using Game1.Screens;
 
@@ -16,7 +10,6 @@ namespace Game1
         private GraphicsDeviceManager _graphics;
         private readonly ScreenManager _screenManager;
         private SpriteBatch _spriteBatch;
-        InputManager inputManager;
 
         public Game1()
         {
@@ -46,7 +39,6 @@ namespace Game1
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            inputManager = new InputManager();
             
             base.Initialize();
         }
